@@ -1,4 +1,4 @@
-//BIENVENIDA AL USUARIO
+/* //BIENVENIDA AL USUARIO
 alert(
   "Bienvenidx a MeowShop. En nuestra tienda online te ofrecemos los mejores artículos para tus michis."
 );
@@ -85,4 +85,62 @@ let costoFinalIVA = (costoFinal, IVA) => {
 };
 alert(
   "El importe final con IVA incluido es $" + costoFinalIVA(costoFinal, IVA)
-);
+); */
+
+
+/* Bienvenida al usuario */
+
+let bienvenida = alert ("Bienvenido a Meow Nails")
+let nombre = prompt ("Ingrese su nombre")
+console.log("Usted ingreso como " + nombre)
+
+
+/* Constructor */
+
+function nails(nombre, precio) {
+    this.nombre = nombre
+    this.precio = precio
+
+}
+
+const esculpidas = new nails ("Esculpidas" , 5000)
+const semiperma = new nails ("Semipermanente", 7500)
+const acrilicas = new nails ("Acrilicas", 8000)
+const permanente = new nails ("Permanentes" , 6000)
+
+let catalogo = [esculpidas, semiperma, acrilicas, permanente];
+
+
+
+
+/* Agregar Nails al array */
+
+function agregarNails(nails) {
+    catalogo.push(nails);
+}
+
+    agregarNails (new nails("Diseño", 9000))
+
+    console.log(catalogo)
+
+    /* Filtrado de precio en array menor o igual a 6000.00 */ 
+
+    const masBarato = catalogo.filter (i => i.precio <= 6000);
+
+    console.log(masBarato);
+
+    /* Lista de precios */
+
+    function mostrarPrecios() {
+        console.log("Lista de precios:");
+        catalogo.forEach((catalogo) => {
+        console.log(
+            `Nail: ${catalogo.nombre}, Precio: $${catalogo.precio.toFixed(2)}`
+        );
+        });
+    }
+
+    mostrarPrecios();
+
+
+    
