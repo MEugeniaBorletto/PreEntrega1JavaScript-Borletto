@@ -1,2 +1,2 @@
-# PreEntrega1JavaScript-Borletto
+# PreEntrega2JavaScript-Borletto
 JavaScript - CH
